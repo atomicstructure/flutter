@@ -3,8 +3,6 @@ import 'package:flutter_dev/newgradient_container.dart';
 
 void main() => runApp(
       const MaterialApp(
-        home: Scaffold(
-          body: NewGradientContainer(),
-        ),
+        home: Scaffold(body: NewGradientContainer()),
       ),
     );
