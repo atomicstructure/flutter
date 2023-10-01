@@ -24,9 +24,15 @@ const aEnd = Alignment.topLeft;
 // }
 
 class NewGradientContainer extends StatelessWidget {
-  const NewGradientContainer(this.colors, {super.key});
+  NewGradientContainer(this.colors, {super.key});
 
   final List<Color> colors;
+  var activeDice = 'assets/images/dice-1.png';
+
+  void rollDice() {
+    var activeDice = 'assets/images/dice-3.png';
+    print(activeDice);
+  }
 
   @override
   Widget build(context) {
@@ -35,7 +41,27 @@ class NewGradientContainer extends StatelessWidget {
         gradient: LinearGradient(colors: colors, begin: aBegin, end: aEnd),
       ),
       child: Center(
-        child: Image.asset('assets/images/dice-2.png', width: 200),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(activeDice, width: 200),
+            const SizedBox(
+              height: 20,
+            ),
+            TextButton(
+              onPressed: rollDice,
+              style: TextButton.styleFrom(
+                // padding: const EdgeInsets.only(top: 20),
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
+                textStyle: const TextStyle(fontSize: 27),
+              ),
+              child: const Text(
+                'Roll Dice',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
