@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev/styled_text.dart';
 
 const aBegin = Alignment.bottomRight;
 const aEnd = Alignment.topLeft;
@@ -35,8 +34,8 @@ class NewGradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: colors, begin: aBegin, end: aEnd),
       ),
-      child: const Center(
-        child: StyledText('Hello World, This is my first Flutter App'),
+      child: Center(
+        child: Image.asset('assets/images/dice-2.png', width: 200),
       ),
     );
   }
