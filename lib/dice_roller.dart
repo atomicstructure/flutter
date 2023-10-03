@@ -11,7 +11,7 @@ class _DiceRollerState extends State<DiceRoller> {
   var activeDice = 'assets/images/dice-1.png';
 
   void rollDice() {
-    setState(() => activeDice = 'assets/images/dice-1.png');
+    setState(() => activeDice = 'assets/images/dice-4.png');
   }
 
   @override
